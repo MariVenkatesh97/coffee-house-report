@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee House Business Report</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f5f0;
+        }
+        
+        header {
+            text-align: center;
+            padding: 30px 0;
+            background-color: #7D4427;
+            color: white;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        h2 {
+            color: #7D4427;
+            border-bottom: 2px solid #7D4427;
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+        
+        h3 {
+            color: #A05C35;
+            margin-top: 25px;
+        }
+        
+        .objectives {
+            background-color: #FFF;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        
+        .objective-list {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+        
+        .objective-list li {
+            margin-bottom: 15px;
+            position: relative;
+        }
+        
+        .objective-list li:before {
+            content: "☕";
+            position: absolute;
+            left: -25px;
+            color: #A05C35;
+        }
+        
+        .dashboard-container {
+            background-color: #FFF;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .dashboard-link {
+            display: inline-block;
+            background-color: #7D4427;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin: 20px 0;
+            transition: background-color 0.3s;
+        }
+        
+        .dashboard-link:hover {
+            background-color: #A05C35;
+        }
+        
+        .takeaways {
+            background-color: #FFF;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .metric-box {
+            background-color: #7D4427;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .metric-value {
+            font-size: 1.8em;
+            font-weight: bold;
+        }
+        
+        .metric-label {
+            font-size: 1em;
+        }
+        
+        .metrics-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .trend-section, .product-section, .location-section, .time-section {
+            background-color: #FFF;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        
+        .conclusion {
+            background-color: #7D4427;
+            color: white;
+            padding: 25px;
+            border-radius: 8px;
+            margin-top: 30px;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: #A05C35;
+            color: white;
+        }
+        
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+        
+        .growth {
+            color: #28a745;
+            font-weight: bold;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            color: #666;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Coffee House Business Report</h1>
+        <p>Data-Driven Insights for Strategic Growth</p>
+    </header>
+    
+    <section class="objectives">
+        <h2>Objectives</h2>
+        <ul class="objective-list">
+            <li><strong>Connect and Profile the Data</strong> - Gather and organize all relevant business metrics and sales information</li>
+            <li><strong>Create Relational Model</strong> - Establish connections between different data points to identify correlations</li>
+            <li><strong>Add Calculated Measures and Fields</strong> - Develop key performance indicators and analytical metrics</li>
+            <li><strong>Build an Interactive Report</strong> - Create a dynamic dashboard for real-time business intelligence</li>
+        </ul>
+    </section>
+    
+    <section class="dashboard-container">
+        <h2>Interactive Dashboard</h2>
+        <p>Below is a snapshot of our Power BI dashboard:</p>
+        
+        <div style="text-align: center; margin: 20px 0; max-width: 100%; overflow: hidden;">
+            <img src="" alt="Coffee House Dashboard" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); border: 1px solid #ddd;">
+        </div>
+        
+        <p>For the full interactive experience with filtering capabilities, access the live dashboard:</p>
+        <a href="https://app.powerbi.com/view?r=eyJrIjoiYTU5YTJmNDAtNDk4MC00NzkwLWI2ZTMtYjBjMzFmNTY4MTU1IiwidCI6IjI1Y2UwMjYxLWJiZDYtNDljZC1hMWUyLTU0MjYwODg2ZDE1OSJ9" class="dashboard-link" target="_blank">View Interactive Dashboard</a>
+        <p><em>Note: The live dashboard provides filtering options by product category, product type, store location, and month for deeper data exploration.</em></p>
+    </section>
+    
+    <section class="takeaways">
+        <h2>Key Takeaways</h2>
+        
+        <div class="metrics-container">
+            <div class="metric-box">
+                <div class="metric-label">Total Sales</div>
+                <div class="metric-value">$698.8K</div>
+            </div>
+            <div class="metric-box">
+                <div class="metric-label">Total Orders</div>
+                <div class="metric-value">149K</div>
+            </div>
+            <div class="metric-box">
+                <div class="metric-label">Quantity Sold</div>
+                <div class="metric-value">214K</div>
+            </div>
+            <div class="metric-box">
+                <div class="metric-label">Product Variety</div>
+                <div class="metric-value">80</div>
+            </div>
+        </div>
+        
+        <div class="location-section">
+            <h3>Store Performance</h3>
+            <p>The three store locations demonstrate remarkably balanced performance:</p>
+            <table>
+                <tr>
+                    <th>Location</th>
+                    <th>Percentage of Sales</th>
+                </tr>
+                <tr>
+                    <td>Hell's Kitchen</td>
+                    <td>33.84%</td>
+                </tr>
+                <tr>
+                    <td>Astoria</td>
+                    <td>33.23%</td>
+                </tr>
+                <tr>
+                    <td>Lower Manhattan</td>
+                    <td>32.92%</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="product-section">
+            <h3>Product Performance</h3>
+            <p>Product categories show strong diversification with multiple revenue streams:</p>
+            <table>
+                <tr>
+                    <th>Category</th>
+                    <th>Sales Amount</th>
+                    <th>Percentage</th>
+                </tr>
+                <tr>
+                    <td>Coffee</td>
+                    <td>$269.35K</td>
+                    <td>38.63%</td>
+                </tr>
+                <tr>
+                    <td>Tea</td>
+                    <td>$196.41K</td>
+                    <td>28.11%</td>
+                </tr>
+                <tr>
+                    <td>Bakery</td>
+                    <td>$82.32K</td>
+                    <td>11.78%</td>
+                </tr>
+                <tr>
+                    <td>Drinking Chocolate</td>
+                    <td>$72.42K</td>
+                    <td>10.36%</td>
+                </tr>
+            </table>
+            
+            <h4>High Growth Products</h4>
+            <table>
+                <tr>
+                    <th>Product</th>
+                    <th>Current Month Sales</th>
+                    <th>Growth from Previous Month</th>
+                </tr>
+                <tr>
+                    <td>Dark Chocolate Lg</td>
+                    <td>$21.01K</td>
+                    <td class="growth">+$5.0K</td>
+                </tr>
+                <tr>
+                    <td>Sustainably Grown Organic Lg</td>
+                    <td>$21.15K</td>
+                    <td class="growth">+$5.0K</td>
+                </tr>
+                <tr>
+                    <td>Latte Rg</td>
+                    <td>$19.11K</td>
+                    <td class="growth">+$4.6K</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="trend-section">
+            <h3>Monthly Growth Trend</h3>
+            <p>Sales have shown consistent month-over-month growth from January to June:</p>
+            <ul>
+                <li>January: $58.8K</li>
+                <li>February: $76.1K</li>
+                <li>March: $81.7K</li>
+                <li>April: $118.5K</li>
+                <li>May: $156.7K</li>
+                <li>June: $165.5K</li>
+            </ul>
+            <p><strong>Key insight:</strong> Sales have nearly tripled over the six-month period, with the most significant acceleration observed between April-June.</p>
+        </div>
+        
+        <div class="time-section">
+            <h3>Sales by Time of Day</h3>
+            <p>Clear pattern of customer activity throughout the day:</p>
+            <ul>
+                <li><strong>Peak Period:</strong> 8-10 AM (highest at 9-10 AM)</li>
+                <li><strong>Secondary Peak:</strong> 7-8 AM</li>
+                <li><strong>Declining Pattern:</strong> Steady decline after 10 AM</li>
+                <li><strong>Lowest Performance:</strong> Early morning (before 6 AM) and evening hours (after 7 PM)</li>
+            </ul>
+        </div>
+    </section>
+    
+    <section class="conclusion">
+        <h2>Conclusion</h2>
+        <p>The Coffee House business demonstrates robust health with consistent growth across all metrics. The strong upward sales trajectory from January to June indicates excellent market reception and effective business execution. Morning hours drive the majority of revenue, suggesting strong commuter and breakfast traffic.</p>
+        
+        <p>Product performance is balanced across three equal-performing locations, with traditional coffee categories leading sales but specialty products showing promising growth. All products in the detailed view show positive growth trends, with premium and specialty items delivering the strongest percentage increases. The correlation between sales and volume growth confirms that higher prices are not driving revenue increases alone - customer demand is genuinely increasing across product lines.</p>
+        
+        <p>The business appears well-positioned for continued expansion, with opportunities to further capitalize on morning peak hours while developing strategies to boost afternoon and evening sales.</p>
+    </section>
+    
+</body>
+</html>
